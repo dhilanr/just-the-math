@@ -106,3 +106,10 @@ hr {
   background-color: $border-color;
   border: 0;
 }
+
+// Offsets for headings when there's an alert
+main a[data-id][id] {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
