@@ -7,16 +7,6 @@ layout: table_wrappers
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
 <body>
-  <!-- alerts added to _config.yml: primary,secondary,success,danger,warning,info,light,dark -->
-  {% if site.alert %}
-  <div class="alert alert-dismissible fixed-top mb-0 rounded-0 shadow" data-alert="{{ site.alert }}" id="alert" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-      </button>
-      {%- capture alert -%}{%- include alert.md -%}{%- endcapture -%}
-      {{- alert | markdownify | replace: " id=", " data-id=" | strip -}}
-  </div>
-  {% endif %}
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="svg-link" viewBox="0 0 24 24">
       <title>Link</title>
@@ -75,11 +65,9 @@ layout: table_wrappers
         {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
-    {% if site.copyright %}
-      <footer class="site-footer">
-        Dhilan Ramaprasad<br>© {% site.year %}  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-      </footer>
-    {% endif %}
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header">
