@@ -57,7 +57,7 @@
   @include mq(md) {
     display: flex;
     justify-content: space-between;
-    height: $header-height;
+    height: 60px;
     background-color: $body-background-color;
     border-bottom: $border $border-color;
   }
